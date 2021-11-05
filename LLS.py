@@ -20,8 +20,8 @@ class lls(object):
     def fit(self, x_fit: list, y_fit: list): #Recebe duas listas de listas, cada elemento das listas internas contendo valores individuais
         if len(x_fit) != len(y_fit):
             raise RuntimeError("Argumentos de fit são listas de tamanhos incompatíveis")
-        XY = np.multiply(np.array(achataLista2d(x_fit)), np.array(achataLista2d(y_fit)))
-        X2 = np.multiply(np.array(achataLista2d(x_fit)), np.array(achataLista2d(x_fit)))
+        XY = lls.np.multiply(lls.np.array(achataLista2d(x_fit)), lls.np.array(achataLista2d(y_fit)))
+        X2 = lls.np.multiply(lls.np.array(achataLista2d(x_fit)), lls.np.array(achataLista2d(x_fit)))
         self.__sumX = sum(achataLista2d(x_fit))
         self.__sumY = sum(achataLista2d(y_fit))
         self.__sumXY = sum(XY.tolist())
